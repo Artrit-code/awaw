@@ -1,0 +1,219 @@
+/* style.css */
+
+/* Font dhe bazë */
+body {
+    font-family:"Roboto Condensed", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* e zezë elegante */
+    color: #ddd; /* gri e lehtë për tekst */
+    line-height: 1.6;
+}
+
+a {
+    color: #c9b99a; /* ngjyrë krem elegante */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 200px 190px;
+    position: relative;
+
+}
+
+header h1 {
+    font-size: 5em;
+    margin: 0;
+    color: #e7e5e2;
+    /* font-family:Georgia, 'Times New Roman', Times, serif; */
+}
+
+header p {
+    font-size: 1.8em;
+    margin-top: 0.3px;
+    color: #0f0e0a;
+}
+
+/* Hiq stilet default të listës */
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+
+  /* Ky është sekreti për t’i vendosur në një rresht */
+  display: flex;
+  align-items: center;
+}
+
+/* Hapësira mes elementeve */
+.navbar li {
+  margin: 0 10px;
+  font-size: 1.2em;
+}
+
+/* Vija ndarëse mes elementeve */
+.navbar li:not(:last-child)::after {
+  content: "|";
+  margin-left: 10px;
+  color: #888;
+}
+
+/* Stili i lidhjeve */
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #3d3d3d;
+}
+
+/* Modal për albumin e fotove */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+.close, .prev, .next {
+  position: absolute;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.close { top: 20px; right: 30px; }
+.prev { left: 10px; top: 50%; transform: translateY(-50%); }
+.next { right: 10px; top: 50%; transform: translateY(-50%); }
+
+
+
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+    /* spacebetween: 3px; */
+}
+
+h2 {
+    color: #f0e9dc;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #444;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.projekti {
+    margin-bottom: 40px;
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: transform 0.3s;
+    .projekti {
+    border: 1px solid #c9b99a;
+}
+
+}
+
+.projekti img {
+    max-width: 100%;
+    border-radius: 5px;
+    transition: transform 0.4s ease;
+}
+
+.projekti:hover img {
+    transform: scale(1.03);
+}
+
+.projekti h3 {
+    margin-top: 15px;
+    color: #c9b99a;
+}
+
+.Contacts-section {
+    background-color: #1a1a1a;
+    color: #ddd;
+    padding: 60px 20px;
+    
+}
+
+.Contacts-title {
+    color: #f0e9dc;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    background-color: #2a2a2a;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background: rgba(201, 185, 154, 0.2);
+    color: #fff;
+    backdrop-filter: blur(6px);
+    border: 1px solid #c9b99a;
+    padding: 12px 25px;
+    margin-top: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: rgba(201, 185, 154, 0.4);
+}
+
+.footer {
+    background-color: #111;
+    color: #fafafa;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #333;
+}
+
+.footer a {
+    color: #fafaf9;
+}
+.footer h1 {
+    /* margin:0; */
+    text-align: left;
+    font-size: 1.2em;
+}
+/* Efekt fade-in për seksionet */
+section, .projekti {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
